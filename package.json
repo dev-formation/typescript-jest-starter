@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "transpile": "npx tsc -w",
+    "transpile": "tsc -w",
     "execute": "nodemon dist/index.js"
   },
   "keywords": [],
@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.3"
   }
 }
