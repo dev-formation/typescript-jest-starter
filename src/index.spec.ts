@@ -1,11 +1,23 @@
-describe('Un ensemble de test', () => {
-  test('Test exemple1', () => {
-    const actual = 1;
-    expect(actual).toBe(1);
+import { hello, message } from './index';
+
+describe('Un ensemble de test de sur des variables', () => {
+  test('Verification contenu variable', () => {
+    expect(message).toBe('Hello World !');
   });
 
-  test('Test exemple2', () => {
-    const actual = 0;
-    expect(actual).toBe(1);
+  test('Verification contenu variable', () => {
+    expect(message).not.toBe('HelloWorld!');
+  });
+});
+
+describe('Un ensemble de test de fonction', () => {
+  test('Dis hello à Joseph', () => {
+    const result = hello('Joseph');
+    expect(result).toBe('Hello Joseph !');
+  });
+
+  test('Dis hello à un inconnu', () => {
+    const result = hello();
+    expect(result).toBe('Hello inconnu !');
   });
 });
